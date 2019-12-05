@@ -4,12 +4,27 @@
   "description": "nearlust.com",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "https": "clear; export NODE_ENV=https && nodemon",
+    "restart": "kill -9 $(ps aux | grep 'snodes' | awk '{print $2}') && node ./src/app.js "
   },
   "author": "Christopher Fajardo",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^3.0.0",
-    "express": "^4.17.1"
+    "mongoose": "^5.5.15",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "chalk": "^2.4.2",
+    "nodemon": "^1.19.1"
   }
 }
