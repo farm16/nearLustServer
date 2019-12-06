@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ProviderProfileSchema = new mongoose.Schema({
   name: { first: String, last: String },
@@ -21,7 +21,7 @@ const ProviderProfileSchema = new mongoose.Schema({
     picture: String,
     id: String
   },
-  activeReservations: [{ fromReservation: String }]
+  activeReservations: Array
 });
 
-module.exports = mongoose.model('ProviderProfile', ProviderProfileSchema);
+module.exports = mongoose.model("ProviderProfile", ProviderProfileSchema);
