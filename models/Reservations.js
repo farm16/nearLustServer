@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const ReservationSchema = new mongoose.Schema({
   reservationType: String,
   reservationCreationTime: { type: Date, default: Date.now },
-  _reservationToId: Schema.Types.ObjectId,
-  _reservationFromId: Schema.Types.ObjectId,
+  _reservationToId: mongoose.Schema.Types.ObjectId,
+  _reservationFromId: mongoose.Schema.Types.ObjectId,
   reservationTimeIn: Date,
   reservationTimeOut: Date,
   isActive: Boolean,
