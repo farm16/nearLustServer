@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ReservationSchema = new mongoose.Schema({
+  reservationType: String,
   reservationCreationTime: { type: Date, default: Date.now },
   _reservationToId: Schema.Types.ObjectId,
   _reservationFromId: Schema.Types.ObjectId,
@@ -11,4 +12,4 @@ const ReservationSchema = new mongoose.Schema({
   note: String
 });
 
-module.exports = mongoose.model("Reservation", ReservationSchema);
+module.exports = mongoose.model('Reservation', ReservationSchema);

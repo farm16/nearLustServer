@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ClientProfileSchema = new mongoose.Schema({
-  Name: { first: String, last: String },
+  name: { first: String, last: String },
   age: String,
   companyName: String,
   phoneNumber: String,
@@ -16,4 +16,4 @@ const ClientProfileSchema = new mongoose.Schema({
   activeReservations: [{ fromReservation: String }]
 });
 
-module.exports = mongoose.model("ClientProfile", ClientProfileSchema);
+module.exports = mongoose.model('ClientProfile', ClientProfileSchema);
